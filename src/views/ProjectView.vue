@@ -1,7 +1,8 @@
 <script setup>
-import NavItem from '@/components/NavItem.vue'
 import { ref } from 'vue'
-
+const props = defineProps({
+  id: { required: true }
+})
 const projects = ref([
   {
     title: 'Web Development Project',
@@ -22,25 +23,62 @@ const projects = ref([
       "Explore the world of artificial intelligence by developing a machine learning model. Choose a dataset, such as image recognition or natural language processing, and use Python libraries like TensorFlow or Scikit-Learn to build and train your model. Experiment with different algorithms and parameters to optimize performance. Through this project, you'll gain practical experience in data preprocessing, model training, and evaluation, essential skills for any aspiring data scientist."
   }
 ])
+const project = ref(projects.value.find((item) => item.id == props.id))
+//const project = ref(projects.value[0])
 </script>
 
 <template>
-  <div class="nav">
-    <RouterLink class="nav-item" :to="{ name: 'home' }">About me</RouterLink>
-    <NavItem class="nav-item" v-for="project in projects" :key="project.id" :project="project" />
+  <div class="main-container">
+    <div class="box">
+      <h1>{{ project.title }}</h1>
+      <p>{{ project.description }}</p>
+    </div>
   </div>
-  <RouterView />
 </template>
 
 <style scoped>
-.nav-item {
-  font-size: 18px;
-  padding: 8px;
-  text-decoration: none;
-}
-.nav {
+.main-container {
   display: flex;
-  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+img {
+  width: 35%;
+  height: 35%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+p {
+  max-width: 500px;
+  padding-left: 35px;
+  font-family: 'Comic Sans MS', 'Comic Sans';
+  font-size: 16px;
+  line-height: 1.7;
+  float: right;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.box {
+  display: flex;
+  width: 900px;
+  border: solid 2px #dddd;
+  padding: 15px;
+  align-items: center;
+  background-color: #757575;
+  border-radius: 2%;
+  box-shadow: 10px 15px 10px black;
 }
 </style>
