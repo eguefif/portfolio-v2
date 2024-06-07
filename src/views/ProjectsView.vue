@@ -46,10 +46,14 @@ const projects = [
 
 <style scoped>
 .project-box {
-  column-count: 2;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: left;
+  width: 50%;
+  gap: 20px;
 }
+
 @media screen and (max-width: 80rem) {
   .project-box {
     column-count: 1;
