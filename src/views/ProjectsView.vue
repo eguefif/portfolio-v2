@@ -49,7 +49,7 @@ const projects = [
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
   width: 50%;
   gap: 20px;
 }

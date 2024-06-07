@@ -14,7 +14,6 @@ import ProjectsView from '@/views/ProjectsView.vue'
       </div>
       <div class="portfolio">
         <PersonalInfoView />
-        <div class="vl"></div>
         <ProjectsView />
       </div>
       <div class="footer">
@@ -95,20 +94,6 @@ h2 {
   }
 }
 
-.vl {
-  height: 250px;
-  width: 2px;
-  margin: 30px;
-  background-color: white;
-}
-@media screen and (max-width: 80rem) {
-  .vl {
-    height: 2px;
-    width: 250px;
-    margin: 30px;
-    background-color: white;
-  }
-}
 .main-box {
   background: #151515 url(./assets/nebula.jpg) no-repeat center center;
   background-size: cover;
