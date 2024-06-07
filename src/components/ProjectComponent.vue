@@ -3,7 +3,7 @@ import { computed } from 'vue'
 const props = defineProps(['project'])
 
 const imgSrc = computed(() => {
-  return new URL(props.project.img, import.meta.url).href
+  return new URL(`../assets/${props.project.img}`, import.meta.url).href
 })
 </script>
 <template>
