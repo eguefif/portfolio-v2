@@ -70,7 +70,7 @@ h2 {
   height: 100%;
   position: relative;
 }
-.portfolio-normal {
+.portfolio {
   display: flex;
   flex-direction: row;
   z-index: 2;
@@ -121,7 +121,7 @@ h2 {
   height: 100%;
 }
 .overlay {
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 0;
   left: 0;
@@ -174,7 +174,7 @@ h2 {
 }
 .footer {
   display: flex;
-  z-index: 4;
+  z-index: 3;
   justify-content: center;
   margin-bottom: 25px;
 }
