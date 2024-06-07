@@ -3,7 +3,7 @@ import ProjectComponent from '@/components/ProjectComponent.vue'
 const projects = [
   {
     title: 'Weather app',
-    img: './src/assets/weatherapp.png',
+    img: './assets/weatherapp.png',
     description:
       'Mini raytracer coded in c able to render scene with textures and different material.',
     techno: ['dart/flutter', 'api request', 'threading'],
@@ -11,7 +11,7 @@ const projects = [
   },
   {
     title: 'Mini Raytracer',
-    img: './src/assets/spheres.png',
+    img: './assets/spheres.png',
     description:
       'Mini raytracer coded in c able to render scene with textures and different material.',
     techno: ['c', 'raytracing', 'threading'],
@@ -20,14 +20,14 @@ const projects = [
 
   {
     title: 'ft_transcendence',
-    img: './src/assets/transcendence.png',
+    img: './assets/transcendence.png',
     description: 'Pong platform spa website with a custom server side pong.',
     techno: ['django', 'javascript', 'python (asyncio, websocket)', 'docker'],
     github: 'https://www.github.com/eguefif/ft_transcendence'
   },
   {
     title: 'ft_irc',
-    img: './src/assets/irc.png',
+    img: './assets/irc.png',
     description: 'Basic IRC server that works with WeeChat',
     techno: ['c++', 'polymorphism'],
     github: 'https://www.github.com/eguefif/ft_irc'
