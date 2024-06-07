@@ -1,12 +1,17 @@
 <script setup>
+import { computed } from 'vue'
 const props = defineProps(['project'])
+
+const imgSrc = computed(() => {
+  return new URL(props.project.img, import.meta.url).href
+})
 </script>
 <template>
   <div class="project-card">
     <div class="flip-card-inner">
       <div class="card-front">
         <h1>{{ props.project.title }}</h1>
-        <img :src="props.project.img" />
+        <img :src="imgSrc" />
       </div>
       <div class="card-back">
         <p>{{ props.project.description }}</p>
