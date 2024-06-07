@@ -9,12 +9,13 @@ const props = defineProps(['project'])
         <img :src="props.project.img" />
       </div>
       <div class="card-back">
-        <p>fsadfadsfsadf sadf sadf sdaf sdafds fds fds fsd</p>
+        <p>{{ props.project.description }}</p>
         <ul>
-          <li>language c</li>
-          <li>Raytracing math and physics</li>
-          <li>team work</li>
+          <li class="techno" v-for="item in props.project.techno" :key="item">{{ item }}</li>
         </ul>
+        <a class="github-logo" :href="props.project.github" target="_blank"
+          ><img src="@/assets/github.png"
+        /></a>
       </div>
     </div>
   </div>
@@ -70,5 +71,17 @@ const props = defineProps(['project'])
   font-size: 24px;
   margin: 15px 0;
   color: #333;
+}
+.github-logo img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.github-logo img:hover {
+  transform: scale(1.2);
+}
+.techno {
+  text-align: left;
 }
 </style>
