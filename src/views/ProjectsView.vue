@@ -4,8 +4,7 @@ const projects = [
   {
     title: 'Weather app',
     img: 'weatherapp.png',
-    description:
-      'Mini raytracer coded in c able to render scene with textures and different material.',
+    description: 'Weather app fething data and displaying current, hourly and week weather',
     techno: ['dart/flutter', 'api request', 'threading'],
     github: 'https://www.github.com/eguefif/weatherapp'
   },
@@ -13,7 +12,7 @@ const projects = [
     title: 'Mini Raytracer',
     img: 'spheres.png',
     description:
-      'Mini raytracer coded in c able to render scene with textures and different material.',
+      'Mini raytracer coded in c able to render scenes with textures and different materials.',
     techno: ['c', 'raytracing', 'threading'],
     github: 'www.github.com/eguefif/miniRT'
   },
@@ -21,7 +20,7 @@ const projects = [
   {
     title: 'ft_transcendence',
     img: 'transcendence.png',
-    description: 'Pong platform spa website with a custom server side pong.',
+    description: 'Pong platform SPA website with a custom server side pong.',
     techno: ['django', 'javascript', 'python (asyncio, websocket)', 'docker'],
     github: 'https://www.github.com/eguefif/ft_transcendence'
   },
